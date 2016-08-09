@@ -47,6 +47,20 @@
 	<div id="page-wrap">
 
 		<div id="header">
+			<nav class="navbar ">
+				<?php
+
+								$args = array(
+												'theme_location' => 'top-bar',
+												'depth'          => 2,
+												'container'      => false,
+												'menu_class'     => 'nav navbar-nav',
+												'walker'         => new Bootstrap_Walker_Nav_Menu()
+								);
+
+								wp_nav_menu($args);
+
+				?>			</nav>
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 			<div class="description"><?php bloginfo('description'); ?></div>
 		</div>

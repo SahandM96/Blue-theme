@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="container">
+
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
@@ -14,7 +16,7 @@
 
 			<div class="postmetadata">
 				<?php the_tags('Tags: ', ', ', '<br />'); ?>
-				Posted in <?php the_category(', ') ?> | 
+				Posted in <?php the_category(', ') ?> |
 				<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
 			</div>
 
@@ -29,7 +31,7 @@
 		<h2>Not Found</h2>
 
 	<?php endif; ?>
-
+	</div>
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
