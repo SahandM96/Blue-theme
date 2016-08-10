@@ -34,10 +34,12 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>/css/master.css">
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
-	<?php wp_head(); ?>
+	<?php	if(is_page_template('home.php')) { ?>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/Home.css">
+		<?php }?>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
+		<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
