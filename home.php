@@ -11,4 +11,16 @@ Template Name: Home
     </div>
     </div>
   </div>
+  <div class="container">
+    <div class="NewsBoxs">
+      ss
+    </div>
+    <div class="NewsBoxs">
+      ss
+    </div>
+    <div class="NewsBoxs">
+      ss
+    </div>
+  </div>
+
 <?php get_footer(); ?>
