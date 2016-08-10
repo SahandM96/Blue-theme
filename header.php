@@ -5,11 +5,11 @@
 	<meta charset="<?php bloginfo('charset'); ?>" />
 
 	<?php if (is_search()) { ?>
-	   <meta name="robots" content="noindex, nofollow" />
+	<meta name="robots" content="noindex, nofollow" />
 	<?php } ?>
 
 	<title>
-		   <?php
+		<?php
 		      if (function_exists('is_tag') && is_tag()) {
 		         single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
 		      elseif (is_archive()) {
@@ -34,11 +34,9 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>/css/master.css" >
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>/css/master.css">
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
-	<?php	if(is_page_template('home.php')) { ?>
-		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
-	<?php }?>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
 	<?php wp_head(); ?>
 </head>
 
@@ -60,7 +58,10 @@
 
 								wp_nav_menu($args);
 
-				?>			</nav>
+				?>
+			</nav>
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<div class="description"><?php bloginfo('description'); ?></div>
+			<!-- <div class="description">
+				<?php bloginfo('description'); ?>
+			</div> -->
 		</div>
