@@ -13,7 +13,6 @@ Template Name: Home
   </div>
   <!-- End of SlideSow -->
   <div class="container"><!--NewsBoxs-->
-
     <div class="NewsBoxs">
       <?php $recent = new WP_Query('cat=1&showposts=3'); while ($recent->have_posts()) : $recent->the_post();?>
           <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
