@@ -1,1 +1,12 @@
-
+#SlideShow {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: block;
+    padding-bottom: 18px;
+}
+#SlideShow img{
+  height: 400px;
+  width: 100%;
+  image-resolution:snap;
+}
