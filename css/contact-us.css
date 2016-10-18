@@ -1,0 +1,28 @@
+.Contact{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.Contact-form{
+  position: relative;
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+  padding: 15px 15px 15px 15px ;
+}
+.Contact-info{
+  text-align: right;
+  position: relative;
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+  padding: 15px 15px 15px 15px ;
+}
+.Contact-info h6{
+  text-align: center;
+}
+.Contact-info img{
+  width:  20px;
+  height: 20px;
+}

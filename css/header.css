@@ -1,0 +1,193 @@
+#header{
+  padding-top: 4px;
+}
+#header a{
+  text-decoration: none;
+}
+#header h1{
+  color: #041b93;
+  margin-top: 10px;
+  text-align: center;
+  /*text-shadow: 2px 0.5px #262d30;*/
+}
+#header img{
+  height: 123px;
+  width: 460px;
+  /*border-radius: 3px;*/
+}
+#header table{
+  margin-top: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+table td{
+  border: none;
+}
+table{
+  border-bottom: 1px solid #fff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(255, 255, 255);
+  /*box-shadow: 3px 3px #333333;*/
+}
+@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+/* Starter CSS for Menu */
+.main-nav {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+}
+.main-nav ul,
+.main-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav ul {
+  position: relative;
+  z-index: 597;
+}
+.main-nav ul li {
+  float: right;
+  min-height: 1px;
+  vertical-align: middle;
+}
+.main-nav ul li.hover,
+.main-nav ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+.main-nav ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+.main-nav ul ul li {
+  float: none;
+}
+.main-nav ul ul ul {
+  top: 0;
+  left: -190px;
+  width: 190px;
+}
+.main-nav ul li:hover > ul {
+  visibility: visible;
+}
+.main-nav ul ul {
+  bottom: 0;
+  left: 0;
+}
+.main-nav ul ul {
+  margin-top: 0;
+}
+.main-nav ul ul li {
+  font-weight: normal;
+}
+.main-nav a {
+  display: block;
+  line-height: 1em;
+  text-decoration: none;
+}
+/* Custom CSS Styles */
+.main-nav {
+  background: #333333;
+  border-bottom: 4px solid #1b9bff;
+  font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+.main-nav > ul {
+  *display: inline-block;
+}
+.main-nav:after,
+.main-nav ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.main-nav ul {
+  text-transform: uppercase;
+}
+.main-nav ul ul {
+  border-top: 4px solid #1b9bff;
+  text-transform: none;
+  min-width: 190px;
+}
+.main-nav ul ul a {
+  background: #1b9bff;
+  color: #ffffff;
+  border: 1px solid #0082e7;
+  border-top: 0 none;
+  line-height: 150%;
+  padding: 16px 20px;
+  font-size: 12px;
+}
+.main-nav ul ul ul {
+  border-top: 0 none;
+}
+.main-nav ul ul li {
+  position: relative;
+}
+.main-nav ul ul li:first-child > a {
+  border-top: 1px solid #0082e7;
+}
+.main-nav ul ul li:hover > a {
+  background: #4eb1ff;
+  color: #ffffff;
+}
+.main-nav ul ul li:last-child > a {
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -moz-box-shadow: 0 1px 0 #1b9bff;
+  -webkit-box-shadow: 0 1px 0 #1b9bff;
+  box-shadow: 0 1px 0 #1b9bff;
+}
+.main-nav ul ul li:last-child:hover > a {
+  -moz-border-radius: 0 0 0 3px;
+  -webkit-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.main-nav ul ul li.has-sub > a:after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -8px;
+}
+.main-nav ul li:hover > a,
+.main-nav ul li.active > a {
+  background: #1b9bff;
+  color: #ffffff;
+}
+.main-nav ul li.has-sub > a:after {
+  content: '+';
+  margin-left: 5px;
+}
+.main-nav ul li.last ul {
+  left: auto;
+  right: 0;
+}
+.main-nav ul li.last ul ul {
+  left: auto;
+  right: 99.5%;
+}
+.main-nav a {
+  background: #333333;
+  color: #CBCBCB;
+  padding: 0 20px;
+}
+.main-nav > ul > li > a {
+  line-height: 48px;
+  font-size: 12px;
+}

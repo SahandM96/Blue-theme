@@ -30,13 +30,18 @@
 	</title>
 
 	<link rel="shortcut icon" href="/favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
-	<?php	if(is_page_template('home.php')) { ?>
+
+	<?php	if(is_home()) { ?>
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/Home.css">
 	<?php }?>
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
+	<?php	if(is_page_template('ContactUs.php')) { ?>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/contact-us.css">
+	<?php }?>
+	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/single.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/header.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/footer.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-page.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/skeleton.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
@@ -49,38 +54,19 @@
 	<div id="page-wrap">
 
 		<div id="header">
-			<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                <?php bloginfo('name'); ?>
-            </a>
-    </div>
-
-        <?php
-            wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-        ?>
-    </div>
-</nav>
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<!-- <div class="description">
-				<?php bloginfo('description'); ?>
-			</div> -->
+			<nav class="sixteen colums nav-bar">
+				<?php wp_nav_menu(array('container_class' => 'main-nav','container'=>'nav' )); ?>
+			</nav>
+			<a href="<?php echo get_option('home'); ?>/">
+			<div class="container">
+				<?php	if(!is_home()) { ?>
+				<table>
+					<tr>
+						 <td>
+							<img src="<?php bloginfo('template_url');?>/images/header-Logo.png" alt="رستوران آبی" />
+						</td>
+					</tr>
+				</table>
+				<?php }?>
+			</div></a>
 		</div>

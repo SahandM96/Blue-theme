@@ -1,0 +1,25 @@
+.Main_Page{
+  display: block;
+  position: relative;
+  background-color: #ffffff;
+  padding: 10px 10px 10px 10px ;
+  margin-bottom: 10px;
+  border: 4px solid #1b9bff;
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgb(27, 155, 255);
+  box-shadow: 3px 3px #333333;
+}
+.Main_Page img{
+  align-items: center;
+}
+/*.Archive{
+  border-style: solid;
+  border-color: #2b2b2b;
+  border-bottom: 1px ;
+}*/
+.Main_Page hr{
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px #2b2b2b;
+}

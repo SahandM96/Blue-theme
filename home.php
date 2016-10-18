@@ -1,22 +1,23 @@
-<?php
-/*
-Template Name: Home
-*/
-?>
 <?php get_header(); ?>
-  <!-- <div class="container"> -->
-    <div id="slider" class="row sixteens columns">
-        <?php if (function_exists('easingsliderlite')) { easingsliderlite(); } ?>
+    <div id="SlideShow" class="container">
+      <?php wd_slider(1); ?>
      </div>
-  <!-- </div> -->
-  <!-- End of SlideSow -->
-  <div class="container"><!--NewsBoxs-->
-    <div class="NewsBoxs">
-      <?php $recent = new WP_Query('cat=1&showposts=3'); while ($recent->have_posts()) : $recent->the_post();?>
-          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-      <?php the_excerpt(); ?>
-      <?php endwhile; ?>
-    </div>
+  <div class="Home-Boxs">
+    <?php
+    $args = array( 'numberposts' => 3, 'cat' => '21' );
+    $postslist = get_posts( $args );
+      foreach ($postslist as $post) :  setup_postdata($post); ?>
+        <div class="Home-Box">
+          <?php the_post_thumbnail( 'frontpage-thumb' ); ?>
+          <div class="Home-Box_info" style="">
+            <h4 style="text-shadow:none;"><?php the_title() ?></h4>
+                <?php the_excerpt (); ?><br>
+          </div>
+          <div class="Home-Box_Link">
+            <a href="<?php the_permalink(); ?>"><p>بیشتر بخوانید</p></a>
+          </div>
+        </div>
+      <?php endforeach;?>
   </div>
 
 <?php get_footer(); ?>
