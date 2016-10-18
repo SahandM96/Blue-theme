@@ -115,6 +115,40 @@ h1{
       border-color: #1b9bff;
 
     }
+}
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    .Home-Boxs{
+      display: table;
+      position: relative;
+      height: auto;
+      width: 100%;
+      align-self: center;
+      margin: 2% 3% 2% 3% ;
+      padding: 1.5% 1% 1.5% 3% ;
+    }
+    .Home-Box{
+      display: block;
+      padding: 0.7% 0.7% 0.7% 0.7% ;
+      margin-left: 4.5px;
+      margin-right: 4.5px;
+      position: relative;
+      min-height: 200px;
+      background:#fff;
+      background-size: cover;
+      display:inline-block;
+      height: 100%;
+      max-height: 336px;
+      width: 27%;
+      float:left;
+      border: 1% solid #1b9bff;
+      border-width: 1%;
+      border-style: solid;
+      border-color: #1b9bff;
 
+    }
 
 }
